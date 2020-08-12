@@ -102,6 +102,10 @@
 }
 
 @media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 600px;
+  }
+
   .section-padding {
     padding: 50px 0;
   }
@@ -207,6 +211,16 @@
 
   .our-services .card:nth-child(even) .card-body .section-heading {
     text-align: left;
+  }
+
+  .services-modal button.close {
+    top: 40px;
+    right: 20px;
+    color: var(--primary-color);
+  }
+
+  .services-modal .modal-dialog-centered {
+    display: block;
   }
 
   .partners {

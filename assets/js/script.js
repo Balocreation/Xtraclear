@@ -1,7 +1,7 @@
 //  Preloader
 jQuery(window).on("load", function() {
-    $('#preloader').fadeOut(500);
-    $('#app').addClass('show');
+  $('#preloader').fadeOut(500);
+  $('#app').addClass('show');
 });
 
 (function($) {
@@ -37,23 +37,6 @@ jQuery(window).on("load", function() {
         $(this).parent(".file-upload-wrapper").attr("data-text", $(this).val().replace(/.*(\/|\\)/, ''));
     });
 
-    // Product Image
-    $('.product-image').slick({
-      arrows: false,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      fade: true
-    });
-
-    // Product Nav
-    $('.product-nav').slick({
-      arrows: false,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      asNavFor: '.product-image',
-      focusOnSelect: true
-    });
-
     // Partners
     $('.partner-items').slick({
       arrows: true,
@@ -84,10 +67,21 @@ jQuery(window).on("load", function() {
       ]
     });
 
-})(jQuery);
+    // Product Image
+    $('.product-image').slick({
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true
+    });
 
-// Ripple Effect
-Waves.init();
-Waves.attach('.wave-effect');
-Waves.attach('.btn');
-Waves.attach('button');
+    // Product Nav
+    $('.product-nav').slick({
+      arrows: false,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: '.product-image',
+      focusOnSelect: true
+    });
+
+})(jQuery);
